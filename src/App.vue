@@ -5,12 +5,12 @@
 			<mdb-navbar-brand href="#">
 				Tracker
 			</mdb-navbar-brand>
-			<mdb-navbar-toggler>
+		          					<mdb-navbar-toggler>
 				<mdb-navbar-nav>
+					<mdb-nav-item href="#/register">Register</mdb-nav-item>
+					<mdb-nav-item href="#/login">Login</mdb-nav-item>
 					<mdb-nav-item href="#" active>Home</mdb-nav-item>
 					<mdb-nav-item href="#/dashboard" active>Map</mdb-nav-item>
-					<mdb-nav-item href="#/login">Login</mdb-nav-item>
-					<mdb-nav-item href="#/register">Register</mdb-nav-item>
 				</mdb-navbar-nav>
 			</mdb-navbar-toggler>
 		</mdb-navbar>
@@ -24,7 +24,7 @@ import { mdbNavbar, mdbNavbarBrand, mdbNavbarToggler, mdbNavbarNav, mdbNavItem }
 export default {
 	name: "app",
 	components: {
-		mdbNavbar,
+	     mdbNavbar,
 		mdbNavbarBrand,
 		mdbNavbarToggler,
 		mdbNavbarNav,

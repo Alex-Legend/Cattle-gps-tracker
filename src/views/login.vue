@@ -14,11 +14,20 @@
 			<div class="col-10 md-9 lg-5">
 				<mdb-input label="Your password" icon="lock" type="password" />
 			</div>
+
+			<div class="col-md-6 d-flex justify-content-center">
+          <!-- Simple link -->
+          <a href="#!">Forgot password?</a>
+        </div>
 		</div>
 
 		<div class="text-center">
 			<mdb-btn>Login</mdb-btn>
 		</div>
+		 <!-- Register buttons -->
+      <div class="text-center">
+        <p>Not a member yet? <a href="">Register here</a></p>
+      </div>
 	</form>
 	<!-- Material form login -->
 </div>
