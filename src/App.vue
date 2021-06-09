@@ -1,26 +1,31 @@
 <template>
-	<div id="app" class="pt-5">
-		<mdb-navbar expand="sm" position="top" dark color="blue accent-4">
+	<mdb-container id="app" class="pt-5">
+		<mdb-navbar expand="xl" position="top"  dark color="cyan darken-4"  scrolling>
 			<!-- Navbar brand -->
-			<mdb-navbar-brand href="#">
-				Tracker
+			<mdb-navbar-brand href="#/">
+				<a href="/">
+				Home
+				</a>
 			</mdb-navbar-brand>
 		          					<mdb-navbar-toggler>
-				<mdb-navbar-nav>
-					<mdb-nav-item href="#/register">Register</mdb-nav-item>
-					<mdb-nav-item href="#/login">Login</mdb-nav-item>
-					<mdb-nav-item href="#" active>Home</mdb-nav-item>
-					<mdb-nav-item href="#/dashboard" active>Map</mdb-nav-item>
+				<mdb-navbar-nav right>
+					<mdb-form-inline >
+      <mdb-btn outline="white" size="sm" @click="$router.push({name:'login'})" class="my-0" >login</mdb-btn>
+      <mdb-btn color="white" size="sm" class="my-0" @click="$router.push({name:'register'})">register</mdb-btn>
+    </mdb-form-inline>
 				</mdb-navbar-nav>
 			</mdb-navbar-toggler>
 		</mdb-navbar>
 <br>
-		<router-view />
-	</div>
+
+		<router-view class=""/>
+
+
+	</mdb-container>
 </template>
 
 <script>
-import { mdbNavbar, mdbNavbarBrand, mdbNavbarToggler, mdbNavbarNav, mdbNavItem } from "mdbvue";
+import { mdbNavbar, mdbNavbarBrand, mdbNavbarToggler, mdbNavbarNav, mdbNavItem,mdbBtn, mdbFormInline, mdbContainer } from "mdbvue";
 export default {
 	name: "app",
 	components: {
@@ -29,6 +34,9 @@ export default {
 		mdbNavbarToggler,
 		mdbNavbarNav,
 		mdbNavItem,
+		mdbBtn, 
+		mdbFormInline,
+		mdbContainer
 	},
 };
 </script>

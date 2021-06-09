@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <mdb-container class="container animated slideInRight mt-4">
 	<!-- Material form login -->
 
 	<form class="justify-content-center">
@@ -34,19 +34,36 @@
   </div>
 
   <!-- Password input -->
+ <p class="font-italic">Password should be atleast 8 characters.</p>
   <div class="form-outline mb-4">
     <input type="password" id="form3Example4" class="form-control" />
     <label class="form-label" for="form3Example4">Password</label>
   </div>
 
-  <!-- Submit button -->
-  <button type="submit" class="btn btn-success btn-block mb-4">Sign up</button>
+  <!-- Repeat Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="form3Example6" class="form-control" />
+    <label class="form-label" for="form3Example6">Repeat-Password</label>
+  </div>
+
+<!-- Save button -->
+  <button type="save"  class="btn btn-primary btn-pill mb-4"><b-button href="#">Save</b-button></button>
+  <mdb-btn color="default">Default</mdb-btn>
+
+ <!-- Save and Continue button -->
+  <button type="save and continue"  class="btn btn-success btn-pill mb-4"><b-button><router-link :to="{name:'cattlereg'}" >Save and Continue</router-link></b-button></button>
+
+
 
         </form>
-    </div>
+    </mdb-container>
 </template>
 <script>
+import { mdbBtn,mdbContainer } from "mdbvue";
 export default {
-    name :"register"
+    name :"register",
+    components: {
+			mdbBtn,mdbContainer
+	},
 }
 </script>

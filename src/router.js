@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import Login from './views/login.vue'
 import Dashboard from './views/dashboard.vue'
 import Register from './views/register.vue'
+import CattleReg from './views/CattleReg.vue'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
 			path: "/register",
 			name: "register",
 			component: Register,
+		},
+		{
+			path: "/cattlereg",
+			name: "CattleReg",
+			component: CattleReg,
 		},
 	],
 });
