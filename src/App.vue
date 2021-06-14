@@ -1,11 +1,9 @@
 <template>
 	<mdb-container id="app" class="pt-5">
-		<mdb-navbar expand="xl" position="top"  dark color="cyan darken-4"  scrolling>
+		<mdb-navbar expand="xl" position="top"  dark color=" indigo darken-4"  scrolling>
 			<!-- Navbar brand -->
 			<mdb-navbar-brand href="#/">
-				<a href="/">
-				Home
-				</a>
+				<mdb-btn  size="sm" @click="$router.push({name:'home'})" class="my-0 btn-rounded" icon="home" >Home</mdb-btn>
 			</mdb-navbar-brand>
 		          					<mdb-navbar-toggler>
 				<mdb-navbar-nav right>

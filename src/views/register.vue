@@ -34,7 +34,7 @@
   </div>
 
   <!-- Password input -->
- <p class="font-italic">Password should be atleast 8 characters.</p>
+ <p class="font-italic" light colour="grey">Password should be atleast 8 characters.</p>
   <div class="form-outline mb-4">
     <input type="password" id="form3Example4" class="form-control" />
     <label class="form-label" for="form3Example4">Password</label>
@@ -47,11 +47,10 @@
   </div>
 
 <!-- Save button -->
-  <button type="save"  class="btn btn-primary btn-pill mb-4"><b-button href="#">Save</b-button></button>
-  <mdb-btn color="default">Default</mdb-btn>
+  <mdb-btn light color=" blue lighten-1" size="md"  >Save</mdb-btn>
 
  <!-- Save and Continue button -->
-  <button type="save and continue"  class="btn btn-success btn-pill mb-4"><b-button><router-link :to="{name:'cattlereg'}" >Save and Continue</router-link></b-button></button>
+  <mdb-btn  outline="indigo" size="md" @click="$router.push({name:'cattlereg'})" class="my-0" >Save and Continue</mdb-btn>
 
 
 
@@ -63,7 +62,8 @@ import { mdbBtn,mdbContainer } from "mdbvue";
 export default {
     name :"register",
     components: {
-			mdbBtn,mdbContainer
+			mdbBtn,
+      mdbContainer
 	},
 }
 </script>

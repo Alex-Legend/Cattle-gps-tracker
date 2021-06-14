@@ -24,42 +24,28 @@
               <h1 class="h1-responsive font-weight-bold animated fadeInLeft">Sign up right now! </h1>
               <hr class="hr-light animated fadeInLeft"/>
               <h6 class="mb-4 animated fadeInLeft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae, quisquam iste, maiores. Nulla.</h6>
-              <mdb-btn outline="white animated fadeInLeft" color="white">Learn More</mdb-btn>
+              <mdb-btn outline="white animated fadeInLeft" color="white" icon="envelope" @click.native="modal = true">Contact Us</mdb-btn>
+               <mdb-modal :show="modal" @close="modal = false">
+      <mdb-modal-header>
+        <mdb-modal-title>Contact Us to Learn More</mdb-modal-title>
+      </mdb-modal-header>
+      <mdb-modal-body>
+        
+      </mdb-modal-body>
+      <mdb-modal-footer>
+        <mdb-btn color="secondary" @click.native="modal = false">Close</mdb-btn>
+        <mdb-btn color="primary">Save changes</mdb-btn>
+      </mdb-modal-footer>
+    </mdb-modal>
             </div>
-            <mdb-col md="6" xl="5" class="mb-4 animated fadeInRight">
-              <mdb-card id="classic-card">
-                <mdb-card-body class="z-depth-2 white-text">
-                  <h3 class="text-center"><mdb-icon icon="user"/> Register:</h3>
-                  <hr class="hr-light"/>
-                  <mdb-input label="Your name" labelColor="white" icon="user"/>
-                  <mdb-input label="Your email" labelColor="white" icon="envelope"/>
-                  <mdb-input label="Your password" labelColor="white" icon="lock" type="password"/>
-                  <div class="text-center mt-4 black-text">
-                    <mdb-btn color="indigo">Sign Up</mdb-btn>
-                    <hr class="hr-light"/>
-                    <div class="text-center d-flex justify-content-center white-label">
-                      <a class="p-2 m-2">
-                        <mdb-icon fab icon="twitter" class="white-text"/>
-                      </a>
-                      <a class="p-2 m-2">
-                        <mdb-icon fab icon="linkedin" class="white-text"/>
-                      </a>
-                      <a class="p-2 m-2">
-                        <mdb-icon fab icon="instagram" class="white-text"/>
-                      </a>
-                    </div>
-                  </div>
-                </mdb-card-body>
-              </mdb-card>
-            </mdb-col>
           </mdb-row>
         </mdb-container>
       </mdb-mask>
     </view-wrapper>
 
-    <mdb-container>
+    <mdb-container light colour="cyan">
       <mdb-row class="py-5">
-        <mdb-col md="12" class="text-center">
+        <mdb-col md="12" class="text-center" >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
@@ -70,7 +56,8 @@
 </template>
 
 <script>
-  import { mdbContainer, mdbRow, mdbCol, mdbNavbar, mdbNavItem, mdbNavbarNav, mdbNavbarToggler, ViewWrapper, mdbMask, mdbBtn, mdbCard, mdbCardBody, mdbInput, mdbIcon, mdbNavbarBrand } from 'mdbvue';
+  import { mdbContainer, mdbRow, mdbCol, mdbNavbar, mdbNavItem, mdbNavbarNav, mdbNavbarToggler, ViewWrapper, mdbMask, mdbBtn, mdbCard, mdbCardBody, mdbInput, mdbIcon, mdbNavbarBrand,
+  mdbModal, mdbModalHeader, mdbModalTitle, mdbModalBody, mdbModalFooter } from 'mdbvue';
   export default {
     name: 'ClassicFormPage',
     components: {
@@ -88,9 +75,19 @@
       mdbCardBody,
       mdbInput,
       mdbIcon,
-      mdbNavbarBrand
+      mdbNavbarBrand,
+      mdbModal,
+      mdbModalHeader,
+      mdbModalTitle,
+      mdbModalBody,
+      mdbModalFooter
+    },
+    data() {
+      return {
+        modal: false
+      };
     }
-  }
+  };
 </script>
 
 <style>

@@ -1,5 +1,5 @@
 <template>
-<mdb-container class="container animated slideInRight mt-4 justify-content-center text-center">
+<mdb-container class="container animated slideInRight mt-4 justify-content-left text-left">
 	<mdb-row>
 		<mdb-col><h2 class="cyan lighten-4">LOGIN</h2></mdb-col>
 	</mdb-row>

@@ -32,7 +32,7 @@ export default new Router({
 		},
 		{
 			path: "/cattlereg",
-			name: "CattleReg",
+			name: "cattlereg",
 			component: CattleReg,
 		},
 	],
