@@ -1,5 +1,5 @@
 <template>
-  <mdb-container class="classic-form-page  animated slideInRight mt-4">
+  <mdb-container class="classic-form-page bg animated slideInRight mt-5 pt-5">
     <!-- <mdb-navbar style="margin-top: 60px" :color="'primary'" position="top" dark href="#" transparent scrolling>
       <mdb-container>
         <mdbNavbarBrand href="#"><strong>MDB</strong></mdbNavbarBrand>
@@ -20,21 +20,25 @@
       <mdb-mask class="d-flex gradient justify-content-center align-items-center">
         <mdb-container>
           <mdb-row>
-            <div class="white-text text-center text-md-left col-md-6 mt-xl-5 mb-5">
-              <h1 class="h1-responsive font-weight-bold animated fadeInLeft">Sign up right now! </h1>
+            <div class="white-text text-center morpheus-den-gradient color-block-5 text-md-left col-md-6 mt-xl-5 mb-5">
+              <h1 class="h1-responsive font-weight-bold animated fadeInLeft">Livestock GPS Tracking Website Eswatini </h1>
               <hr class="hr-light animated fadeInLeft"/>
-              <h6 class="mb-4 animated fadeInLeft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae, quisquam iste, maiores. Nulla.</h6>
-              <mdb-btn outline="white animated fadeInLeft" color="white" icon="envelope" @click.native="modal = true">Contact Us</mdb-btn>
-               <mdb-modal :show="modal" @close="modal = false">
-      <mdb-modal-header>
-        <mdb-modal-title>Contact Us to Learn More</mdb-modal-title>
+              <h6 class="mb-4 animated fadeInLeft">This is a website designed for the simplicity of EmaSwati Livestock farmers to monitor their livestock through their mobile phones. 
+                                                    Simply register NOW and start tracking your Livestock or if you have any queries contact us. We all have to start somewhere somehow. </h6>
+              <mdb-btn outline="white animated fadeInLeft" icon="envelope" @click.native="contact = true">Contact Us</mdb-btn>
+
+    <mdb-modal :show="contact" @close="contact = false">
+      <mdb-modal-header class="text-center">
+        <mdb-modal-title tag="h4" bold class="w-100 black-text">Write to us</mdb-modal-title>
       </mdb-modal-header>
-      <mdb-modal-body>
-        
+      <mdb-modal-body class="mx-3 grey lighten-5-text">
+        <mdb-input label="Your name" icon="user" class="mb-5"/>
+        <mdb-input label="Your email" icon="envelope" type="email" class="mb-5"/>
+        <mdb-input label="Subject" icon="tag" class="mb-5"/>
+        <mdb-textarea icon="pencil-alt" label="Your message"/>
       </mdb-modal-body>
-      <mdb-modal-footer>
-        <mdb-btn color="secondary" @click.native="modal = false">Close</mdb-btn>
-        <mdb-btn color="primary">Save changes</mdb-btn>
+      <mdb-modal-footer center>
+        <mdb-btn @click.native="contact = false" color="indigo darken-2">Send <mdb-icon icon="paper-plane" class="ml-1"/></mdb-btn>
       </mdb-modal-footer>
     </mdb-modal>
             </div>
@@ -57,7 +61,7 @@
 
 <script>
   import { mdbContainer, mdbRow, mdbCol, mdbNavbar, mdbNavItem, mdbNavbarNav, mdbNavbarToggler, ViewWrapper, mdbMask, mdbBtn, mdbCard, mdbCardBody, mdbInput, mdbIcon, mdbNavbarBrand,
-  mdbModal, mdbModalHeader, mdbModalTitle, mdbModalBody, mdbModalFooter } from 'mdbvue';
+  mdbModal, mdbModalHeader, mdbModalTitle, mdbModalBody, mdbModalFooter, mdbTextarea,  mdbModalTitile } from 'mdbvue';
   export default {
     name: 'ClassicFormPage',
     components: {
@@ -80,57 +84,33 @@
       mdbModalHeader,
       mdbModalTitle,
       mdbModalBody,
-      mdbModalFooter
+      mdbModalFooter,
+      mdbTextarea,
+       mdbModalTitile
     },
     data() {
       return {
-        modal: false
+        contact: false
       };
     }
   };
 </script>
 
 <style>
-  .classic-form-page .view {
-    background-image: url('http://mdbootstrap.com/img/Photos/Others/images/91.jpg');
+ body, html {
+    height: 100%;
+  }
+  .bg {
+    /* The image used */
+    background-image: url("https://github.com/Alex-Legend/Cattle-gps-tracker/blob/master/img/homepage.jpg");
+
+    /* Full height and width */
+    height: 100%;
+    width: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
-    height: calc(100vh - 60px);
-  }
-
-  .classic-form-page .gradient {
-    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
-  }
-
-  .classic-form-page .card {
-    background-color: rgba(126, 123, 215, 0.2);
-  }
-
-  .classic-form-page h6 {
-    line-height: 1.7;
-  }
-
-  .classic-form-page .navbar {
-    transition: background .5s ease-in-out,padding .5s ease-in-out;
-  }
-
-  .classic-form-page .navbar .md-form {
-    margin: 0;
-  }
-
-  .top-nav-collapse {
-    background: #424f95 !important;
-  }
-
-  @media (max-width: 768px) {
-    .classic-form-page .navbar:not(.top-nav-collapse) {
-        background: #424f95 !important;
-    }
-  }
-
-  .classic-form-page label {
-    color: #fff!important;
   }
 </style>
