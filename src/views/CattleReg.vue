@@ -6,7 +6,7 @@
 	<form class="justify-content-center">
 		<p class="h4 text-center  mb-4 row"> Cattle Registration Form</p>
         <mdb-input label="Eartag Number" v-model="value" />
-        <mdb-input label="Colour Description" v-model="value" />
+            <mdb-input label="Colour Description" v-model="value" />
         <mdb-input label="Deep Tank Number" v-model="value" />
        <div class="input-group">
     <div class="input-group-prepend">

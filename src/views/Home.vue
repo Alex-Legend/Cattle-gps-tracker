@@ -1,5 +1,5 @@
 <template>
-  <mdb-container fluid class="classic-form-page bg animated slideInRight mt-0 pt-5">
+  <mdb-container fluid class="classic-form-page bg animated slideInRight mt-0 pt-5 ">
     <!-- <mdb-navbar style="margin-top: 60px" :color="'primary'" position="top" dark href="#" transparent scrolling>
       <mdb-container>
         <mdbNavbarBrand href="#"><strong>MDB</strong></mdbNavbarBrand>
@@ -15,9 +15,38 @@
         </mdb-navbar-toggler>
       </mdb-container>
     </mdb-navbar> -->
-
+	<mdb-navbar expand="xl" position="top"  class="blue-gradient color-block-5 " scrolling>
+			<!-- Navbar brand -->
+			<mdb-navbar-brand href="#/">
+				<mdb-btn  color="blue lighten-1" size="sm" @click="$router.push({name:'home'})" class="my-0 btn-rounded" icon="home" >Home</mdb-btn>
+			</mdb-navbar-brand>
+		          					<mdb-navbar-toggler>
+				<mdb-navbar-nav right>
+					<mdb-form-inline >
+      <mdb-btn outline="white" class="h-20" size="sm" @click.native="login=true">Log In</mdb-btn>
+    <mdb-modal :show="login" @close="login = false">
+      <mdb-modal-header class="text-center">
+        <mdb-modal-title tag="h4" bold class="w-100">Log in</mdb-modal-title>
+      </mdb-modal-header>
+      <mdb-modal-body class="mx-3 grey-text">
+        <mdb-input label="Your email" icon="envelope" type="email" class="mb-5"/>
+        <mdb-input label="Password" icon="lock" class="mb-5"/>
+      </mdb-modal-body>
+      <mdb-modal-footer center>
+        <mdb-btn color="indigo lighten-1" @click="$router.push({name:'dashboard'})">Login</mdb-btn>
+		<div class="w-100 text-center" >
+          <p>Not a member Yet? <a href="#/register">Sign Up Here</a></p>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+      </mdb-modal-footer>
+    </mdb-modal>
+      <mdb-btn color="white" size="sm" class="my-0" @click="$router.push({name:'register'})">register</mdb-btn>
+    </mdb-form-inline>
+				</mdb-navbar-nav>
+			</mdb-navbar-toggler>
+		</mdb-navbar>
     <view-wrapper>
-      <mdb-mask class="d-flex gradient justify-content-center align-items-center">
+      <mdb-mask class="d-flex gradient justify-content-center align-items-center ">
         <mdb-container>
           <mdb-row>
             <div class="white-text text-center morpheus-den-gradient color-block-5 text-md-left col-md-6 mt-xl-5 mb-5">
@@ -53,8 +82,9 @@
 </template>
 
 <script>
-  import { mdbContainer, mdbRow, mdbCol, mdbNavbar, mdbNavItem, mdbNavbarNav, mdbNavbarToggler, ViewWrapper, mdbMask, mdbBtn, mdbCard, mdbCardBody, mdbInput, mdbIcon, mdbNavbarBrand,
-  mdbModal, mdbModalHeader, mdbModalTitle, mdbModalBody, mdbModalFooter, mdbTextarea,  mdbModalTitile } from 'mdbvue';
+  import {mdbRow, mdbCol, mdbNavbar, mdbNavbarToggler, ViewWrapper, mdbMask, mdbBtn, mdbCard, mdbCardBody, mdbInput, mdbIcon, mdbNavbarBrand,
+  mdbModal, mdbModalHeader, mdbModalTitle, mdbModalBody, mdbModalFooter, mdbTextarea,  mdbModalTitile, mdbNavbarNav, mdbNavItem, 
+  mdbFormInline, mdbContainer, mdbTab, mdbTabItem } from 'mdbvue';
   export default {
     name: 'ClassicFormPage',
     components: {
@@ -79,11 +109,15 @@
       mdbModalBody,
       mdbModalFooter,
       mdbTextarea,
-       mdbModalTitile
+      mdbModalTitile,
+      mdbFormInline,
+      mdbTab, 
+      mdbTabItem
     },
     data() {
       return {
-        contact: false
+        contact: false,
+        login: false
       };
     }
   };
