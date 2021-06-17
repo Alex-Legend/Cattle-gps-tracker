@@ -1,6 +1,6 @@
 <template>
 	<mdb-container id="app" class="pt-5">
-		<mdb-navbar expand="xl" position="top"  dark color=" indigo darken-4"  scrolling>
+		<mdb-navbar expand="xl" position="top"  class="blue-gradient color-block-5"  scrolling>
 			<!-- Navbar brand -->
 			<mdb-navbar-brand href="#/">
 				<mdb-btn  color="blue lighten-1" size="sm" @click="$router.push({name:'home'})" class="my-0 btn-rounded" icon="home" >Home</mdb-btn>
@@ -8,19 +8,19 @@
 		          					<mdb-navbar-toggler>
 				<mdb-navbar-nav right>
 					<mdb-form-inline >
-      <mdb-btn outline="white" class="h-20" @click.native="login=true">Log In</mdb-btn>
+      <mdb-btn outline="white" class="h-20" size="sm" @click.native="login=true">Log In</mdb-btn>
     <mdb-modal :show="login" @close="login = false">
       <mdb-modal-header class="text-center">
         <mdb-modal-title tag="h4" bold class="w-100">Log in</mdb-modal-title>
       </mdb-modal-header>
       <mdb-modal-body class="mx-3 grey-text">
         <mdb-input label="Your email" icon="envelope" type="email" class="mb-5"/>
-        <mdb-input label="Your password" icon="lock" type="password"/>
+        <mdb-input label="Password" icon="lock" class="mb-5"/>
       </mdb-modal-body>
       <mdb-modal-footer center>
         <mdb-btn color="indigo lighten-1" @click="$router.push({name:'dashboard'})">Login</mdb-btn>
-		<div class="options text-center text-md-right mt-1">
-          <p>Not a member Yet? <a href="#">Sign Up Here</a></p>
+		<div class="w-100 text-center" >
+          <p>Not a member Yet? <a href="#/register">Sign Up Here</a></p>
           <p>Forgot <a href="#">Password?</a></p>
         </div>
       </mdb-modal-footer>

@@ -1,5 +1,5 @@
 <template>
-  <mdb-container class="classic-form-page bg animated slideInRight mt-5 pt-5">
+  <mdb-container fluid class="classic-form-page bg animated slideInRight mt-0 pt-5">
     <!-- <mdb-navbar style="margin-top: 60px" :color="'primary'" position="top" dark href="#" transparent scrolling>
       <mdb-container>
         <mdbNavbarBrand href="#"><strong>MDB</strong></mdbNavbarBrand>
@@ -31,11 +31,14 @@
       <mdb-modal-header class="text-center">
         <mdb-modal-title tag="h4" bold class="w-100 black-text">Write to us</mdb-modal-title>
       </mdb-modal-header>
-      <mdb-modal-body class="mx-3 grey lighten-5-text">
+      <mdb-modal-body class="mx-3 grey-text">
         <mdb-input label="Your name" icon="user" class="mb-5"/>
         <mdb-input label="Your email" icon="envelope" type="email" class="mb-5"/>
         <mdb-input label="Subject" icon="tag" class="mb-5"/>
         <mdb-textarea icon="pencil-alt" label="Your message"/>
+        <div class="black-text">
+        <p >or simply Whatsapp us on i67767678</p>
+        </div>
       </mdb-modal-body>
       <mdb-modal-footer center>
         <mdb-btn @click.native="contact = false" color="indigo darken-2">Send <mdb-icon icon="paper-plane" class="ml-1"/></mdb-btn>
@@ -46,16 +49,6 @@
         </mdb-container>
       </mdb-mask>
     </view-wrapper>
-
-    <mdb-container light colour="cyan">
-      <mdb-row class="py-5">
-        <mdb-col md="12" class="text-center" >
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </mdb-col>
-      </mdb-row>
-    </mdb-container>
   </mdb-container>
 </template>
 
@@ -102,7 +95,7 @@
   }
   .bg {
     /* The image used */
-    background-image: url("https://github.com/Alex-Legend/Cattle-gps-tracker/blob/master/img/homepage.jpg");
+    background-image: url("C:/Users/LEGEND/Documents/project/Cattle-gps-tracker/img/homepage.jpg");
 
     /* Full height and width */
     height: 100%;
