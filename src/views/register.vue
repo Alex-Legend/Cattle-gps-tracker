@@ -44,7 +44,7 @@
 
 				<!-- Save button -->
       <mdb-row class="justify-content-center mb-3">
-				<mdb-btn outline="primary" size="md" @click="$router.push({ name: 'cattlereg' })" class="my-0">Register</mdb-btn>
+				<mdb-btn outline="primary" size="md" @click="$router.push({ name: 'cattlereg' })" class="my-0" >Continue <mdb-icon icon="arrow-right"></mdb-icon></mdb-btn>
       </mdb-row>
 		</mdb-container>
 
@@ -107,8 +107,8 @@ export default {
 		mdbModalFooter,
 		mdbModalTitle,
 		mdbIcon,
-    mdbRow,
-    mdbCol
+        mdbRow,
+        mdbCol
 	},
 	data() {
 		return {

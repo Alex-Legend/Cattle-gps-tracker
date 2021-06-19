@@ -1,8 +1,8 @@
 <template>
-	<mdb-container fluid class=" mt-5">
-		<mdb-navbar position="top" color="primary">
+    <mdb-container Fluid class="pt-5">
+        <mdb-navbar position="top" color="primary">
 			<mdb-navbar-brand to="/">
-				<mdb-icon class="white-text" icon="home" />
+			  <mdb-icon class="white-text" icon="home"/>
 			</mdb-navbar-brand>
 			<mdb-navbar-toggler>
 				<mdb-navbar-nav right>
@@ -12,7 +12,8 @@
 				</mdb-navbar-nav>
 			</mdb-navbar-toggler>
 		</mdb-navbar>
-		<h1 class="blue lighten-5 black-text text-center">Cattle Tracking Map</h1>
+    <p class="h4 text-center  my-4  blue lighten-5">import components of navbar</p>
+       
 
 		<div class="card p-1 blue-grey mt-5 w-100">
 			<Map />

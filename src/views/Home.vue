@@ -1,9 +1,10 @@
 <template>
-	<mdb-container fluid class="bg pt-5 ">
+	<mdb-container fluid class="bg pt-5 pb-0 ">
 		<mdb-navbar expand="xl" position="top" class="blue-gradient color-block-5 " scrolling>
 			<!-- Navbar brand -->
 			<mdb-navbar-brand href="#/">
-				<mdb-btn color="blue lighten-1" size="sm" @click="$router.push({ name: 'home' })" class="my-0 btn-rounded" icon="home">Home</mdb-btn>
+      <h2 class="white-text">EswatiniTracks</h2>
+				<!-- <mdb-btn color="blue lighten-1" size="sm" @click="$router.push({ name: 'home' })" class="my-0 btn-rounded" icon="home">Home</mdb-btn> -->
 			</mdb-navbar-brand>
 			<mdb-navbar-toggler>
 				<mdb-navbar-nav right>
@@ -95,8 +96,9 @@ import {
 	mdbFormInline,
 	mdbContainer,
 	mdbTab,
-	mdbTabItem,
+	mdbTabItem
 } from "mdbvue";
+
 export default {
 	name: "ClassicFormPage",
 	components: {
@@ -124,7 +126,7 @@ export default {
 		mdbModalTitile,
 		mdbFormInline,
 		mdbTab,
-		mdbTabItem,
+		mdbTabItem
 	},
 	data() {
 		return {
