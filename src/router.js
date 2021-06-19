@@ -1,10 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
+
 import Home from './views/Home.vue'
-import Login from './views/login.vue'
-import Dashboard from './views/dashboard.vue'
-import Register from './views/register.vue'
-import CattleReg from './views/CattleReg.vue'
+const Login = () => import("./views/login.vue");
+const Dashboard = () => import("./views/dashboard.vue");
+const Register = () => import("./views/register.vue");
+const CattleReg = () => import("./views/CattleReg.vue");
+// import Login from './views/login.vue'
+// import Dashboard from './views/dashboard.vue'
+// import Register from './views/register.vue'
+// import CattleReg from './views/CattleReg.vue'
 
 Vue.use(Router)
 
