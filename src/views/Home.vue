@@ -1,5 +1,5 @@
 <template>
-	<mdb-container fluid class="bg pt-5 pb-0 ">
+	<mdb-container fluid class="bg pt-5 mt-5 ">
 		<mdb-navbar expand="xl" position="top" class="blue-gradient color-block-5 " scrolling>
 			<!-- Navbar brand -->
 			<mdb-navbar-brand href="#/">
@@ -54,12 +54,18 @@
 									<mdb-input label="Your email" icon="envelope" type="email" class="mb-5" />
 									<mdb-input label="Subject" icon="tag" class="mb-5" />
 									<mdb-textarea icon="pencil-alt" label="Your message" />
-									<div class="black-text">
-										<p>or simply Whatsapp us on 767767678</p>
-									</div>
+									<mdb-row>
+										<mdb-col md="9">
+											<p class="black-text"> <mdb-icon class="green-text" icon="phone"/> or
+											<mdb-icon class="blue-text" icon="whatsapp"/> (+268) 76085052
+											</p>
+
+										</mdb-col>
+									</mdb-row>
+									
 								</mdb-modal-body>
 								<mdb-modal-footer center>
-									<mdb-btn @click.native="contact = false" color="indigo darken-2">Send <mdb-icon icon="paper-plane" class="ml-1"/></mdb-btn>
+									<mdb-btn @click.native="contact = false" outline="indigo">Send <mdb-icon icon="paper-plane" class="ml-1"/></mdb-btn>
 								</mdb-modal-footer>
 							</mdb-modal>
 						</div>

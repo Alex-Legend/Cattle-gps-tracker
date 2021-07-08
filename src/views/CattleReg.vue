@@ -1,7 +1,7 @@
 <template>
     <mdb-container Fluid class="pt-5">
 
-      <mdb-navbar position="top" color="primary">
+      <mdb-navbar position="top" class="blue-gradient color-block-5">
 			<mdb-navbar-brand to="/">
 			  <mdb-icon class="white-text" icon="home"/>
 			</mdb-navbar-brand>
