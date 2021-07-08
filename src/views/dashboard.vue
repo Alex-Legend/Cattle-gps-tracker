@@ -1,8 +1,8 @@
 <template>
-    <mdb-container Fluid class="pt-5">
-        <mdb-navbar position="top" class="blue-gradient color-block-5">
+	<mdb-container fluid class="pt-5 ">
+		<mdb-navbar position="top" color="primary">
 			<mdb-navbar-brand to="/">
-			  <mdb-icon class="white-text" icon="home"/>
+				<mdb-icon class="white-text" icon="home" />
 			</mdb-navbar-brand>
 			<mdb-navbar-toggler>
 				<mdb-navbar-nav right>
@@ -13,43 +13,47 @@
 				</mdb-navbar-nav>
 			</mdb-navbar-toggler>
 		</mdb-navbar>
-    <p class="h4 text-center  my-4  blue lighten-5">include help and logout but as icons</p>
-       
+		<p class="h4 text-center  my-4  blue lighten-5">import components of navbar</p>
 
-        <div class="card p-1 blue-grey mt-5 w-100">
+		<mdb-row class="justify-content-center mt-5 white">
+			<mdb-col col="9">
+				<div class="card p-1 blue-grey  ">
+					<Map />
+				</div>
+			</mdb-col>
+			<mdb-col col="2" class="card">
+				<ul>
+					<li>alex is a bith</li>
+					<li>alex is a bith</li>
+					<li>alex is a bith</li>
+					<li>alex is a bith</li>
+					<li>alex is a bith</li>
+				</ul>
+			</mdb-col>
+		</mdb-row>
 
-        <Map />
-
-        </div>
-         <mdb-container>  
-             <div>
-                   <mdb-btn  outline="secondary" size="md" class="mt-4" icon="print">Print Map</mdb-btn>
-                    <mdb-btn  outline="teal" size="md" class="mt-4 "  @click="$router.push({name:'cattlereg'})">Manage Cattle</mdb-btn>
-             </div>
-        </mdb-container> 
-          
-    </mdb-container>
+		<mdb-row class="justify-content-center z-depth-1 mt-3">
+			<mdb-btn outline="secondary" size="md" class="mt-4" icon="print">Print Map</mdb-btn>
+			<mdb-btn outline="teal" size="md" class="mt-4 " @click="$router.push({ name: 'cattlereg' })">Manage Cattle</mdb-btn>
+		</mdb-row>
+	</mdb-container>
 </template>
 <script>
- import { mdbBtn, mdbContainer, mdbNavbar, mdbNavbarBrand, mdbIcon, mdbNavbarToggler,mdbNavbarNav, mdbFormInline } from 'mdbvue';
-import Map from "./Map.vue"
+import { mdbBtn, mdbContainer, mdbRow,mdbCol, mdbNavbar, mdbNavbarBrand, mdbNavbarToggler, mdbNavbarNav, mdbNavItem } from "mdbvue";
+import Map from "./Map.vue";
 export default {
-    name :"dashboard",
-    components:{
-        Map,
-        mdbBtn,
-        mdbContainer,
-        mdbNavbar,
-        mdbNavbarBrand, 
-        mdbIcon, 
-        mdbNavbarToggler,
-        mdbNavbarNav, 
-        mdbFormInline
-    },
-    data() {
-		return {
-			login: true,
-		};
-    },
-}
+	name: "dashboard",
+	components: {
+		Map,
+		mdbBtn,
+		mdbContainer,
+		mdbRow,
+		mdbCol,
+		mdbNavbar,
+		mdbNavbarBrand,
+		mdbNavbarToggler,
+		mdbNavbarNav,
+		mdbNavItem,
+	},
+};
 </script>

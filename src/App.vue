@@ -1,5 +1,5 @@
 <template>
-	<mdb-container id="app" class="">
+	<mdb-container fluid id="app" class="">
 		<router-view class="" />
 	</mdb-container>
 </template>
@@ -41,6 +41,7 @@ export default {
 		mdbModalFooter,
 		mdbModalTitle,
 		mdbIcon,
+		mdbContainer
 	},
 
 	data() {
